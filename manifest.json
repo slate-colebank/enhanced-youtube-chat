@@ -4,19 +4,19 @@
   "version": "1.0",
   "manifest_version": 3,
   "action": {
-    "default_popup": "popup/popup.html",
+    "default_popup": "src/popup/popup.html",
     "default_icon": "images/icon.png"
   },
   "content_scripts": [
     {
       "matches": ["*://www.youtube.com/live_chat*"],
-      "js": ["scripts/message_enhancements.js"],
+      "js": ["dist/scripts/message_enhancements.js"],
       "all_frames": true
     },
-		{
+    {
       "matches": ["*://www.youtube.com/live_chat*"],
-      "js": ["scripts/strip_verified.js"],
+      "js": ["dist/scripts/strip_verified.js"],
       "all_frames": true
-		}
+    }
   ]
 }
